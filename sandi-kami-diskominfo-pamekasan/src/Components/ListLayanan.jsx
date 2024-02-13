@@ -1,4 +1,4 @@
-import image from "../5.png"
+import image from "../assets/5.png"
 const ListLayanan = () => {
     return (
         <div className="listLayanan">

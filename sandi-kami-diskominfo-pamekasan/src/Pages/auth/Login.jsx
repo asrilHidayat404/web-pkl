@@ -1,35 +1,26 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useSetRecoilState } from "recoil"; // Tambahkan import ini
+import { useSetRecoilState } from "recoil";
 import { authenticatedUser } from "../../Store";
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const setAuthUser = useSetRecoilState(authenticatedUser);
-  // const userInfo = localStorage.getItem("@_@");
   const navig = useNavigate()
-  // console.log(userInfo);
-  // if (userInfo) {
-  //   navig('/dashboard');
-  // }
-//  console.log(isLoggedIn);
   const handleSubmit = async (event) => {
     event.preventDefault();
     axios.post("http://localhost:3001/api/login", { username, password })
       .then(res => {
         console.log(res.data);
         alert(res.data.message);
-        // setIsLoggedIn(true);
         setAuthUser({ check: true }); 
         console.log(res.data.token)
         localStorage.setItem("auth", res.data.token)
         navig("/dashboard")
       })
       .catch(err => {
-        console.log(err);
         alert(err.response.data.message);
       });
   };

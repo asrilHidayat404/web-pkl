@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import { Button, Input } from '@material-ui/core';
+import { useNavigate } from "react-router-dom";
 
 const Step6Form = ({ onSubmit, onPrev, data }) => {
   const [fileImg, setFileImg] = useState('');
   const [warn, setWarn] = useState('');
+  const navigate = useNavigate()
 
   const handleFileChange = (e) => {
-    // Mendapatkan hanya nama file (tanpa path)
     const file = e.target.files[0] || '';
     console.log(e.target.files[0]);
     setFileImg(file);
   };
   
   const handleSubmit = () => {
-    return !fileImg ? setWarn("Field harus diisi") : onSubmit({ fileImg, ...data });
+      if (!fileImg) {
+        setWarn("Field harus diisi")
+      } else {
+        onSubmit({ fileImg, ...data })
+        navigate("/")
+      }
   };
 
   return (

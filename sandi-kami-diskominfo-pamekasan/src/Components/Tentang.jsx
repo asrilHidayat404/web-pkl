@@ -1,4 +1,4 @@
-import logoUtama from "../logoUtama.png"
+import logoUtama from "../assets/logoUtama.png"
 const Tentang = () => {
     return (
         <section id="tentang">

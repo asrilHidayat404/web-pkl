@@ -1,0 +1,11 @@
+@media only screen and (max-width: 1050px) {
+    .sidebar {
+      display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .sidebar.on {
+      display: inline;
+    }
+  }

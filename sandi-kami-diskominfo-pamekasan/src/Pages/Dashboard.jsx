@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes, Link, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import Header from '../Components/AdminComponents/Partial/Header';
 import SideBar from '../Components/AdminComponents/Partial/SideBar';
 import Main from '../Components/AdminComponents/Partial/Main';
@@ -33,7 +33,6 @@ const Dashboard = () => {
   return (
   <div>
     <div className="flex h-screen bg-gray-200">
-      <div className="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden" />
       <SideBar handleLogOut={handleLogOut}/>
       <div className="flex flex-col flex-1 overflow-hidden">
         <Header />

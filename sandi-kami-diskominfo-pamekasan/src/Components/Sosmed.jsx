@@ -2,7 +2,7 @@ const Sosmed = () => {
     return (
         <>
             <header>
-                <h5>Kontak Bidang Persandian dan Keamanan Informasi</h5>
+                <h5 className="text-lg">Kontak Bidang Persandian dan Keamanan Informasi</h5>
             </header>
             <div className="listSosmed">
                 <div className="whatsapp">

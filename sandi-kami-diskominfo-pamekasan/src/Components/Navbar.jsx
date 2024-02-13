@@ -1,6 +1,6 @@
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import React, {useState} from "react"
-import logoUtama from "../LogoSandiKami.jpg"
+import logoUtama from "../assets/LogoSandiKami.jpg"
 
 
 const Navbar = () => {

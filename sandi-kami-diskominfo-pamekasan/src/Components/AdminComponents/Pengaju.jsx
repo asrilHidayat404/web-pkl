@@ -34,7 +34,7 @@ const Pengaju = () => {
   return (
     <div>
       <div className="flex h-screen bg-gray-200">
-        <div className="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden" />
+        {/* <div className="fixed inset-0 z-20 transition-opacity bg-black opacity-50" /> */}
         <SideBar handleLogOut={handleLogOut}/>
         <div className="flex flex-col flex-1 overflow-hidden">
           <Header />

@@ -3,8 +3,8 @@ const Map = () => {
     return (
         <>
             <header>
-                <h5>Kantor Diskominfo Kab Pamekasan</h5>
-                <h6>Jl. Jokotole Gg IV No. 1 Pamekasan, Jawa Timur</h6>
+                <h1 className="text-lg">Kantor Diskominfo Kab Pamekasan</h1>
+                <h1 className="text-lg">Jl. Jokotole Gg IV No. 1 Pamekasan, Jawa Timur</h1>
             </header>
 
             <div className="frame">

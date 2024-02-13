@@ -145,7 +145,7 @@ const PengajuLayout = ({pengaju}) => {
         <div className="container px-6 py-8 mx-auto">
           <h3 className="text-3xl font-medium text-gray-700">Pengaju</h3>
           <div className="text-right">
-            <button className=" p-2 bg-green-700 rounded-lg text-white font-bold" onClick={exportToExcel}>Export to Excel</button>
+            <button className=" p-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-bold" onClick={exportToExcel}>Export to Excel</button>
           </div>
           <div className="mt-8"></div>
           <div className="flex flex-col mt-8">

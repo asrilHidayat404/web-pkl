@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../LogoSandiKami.jpg';
+import Logo from '../assets/LogoSandiKami.jpg';
 import Step1Form from './FormComponents/Step1Form';
 import Step2Form from './FormComponents/Step2Form';
 import Step3Form from './FormComponents/Step3Form';
@@ -21,31 +21,6 @@ const LandingPageTTE = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  // const handleSubmit = async (data) => {
-  //   console.log(data)
-
-  //   try {
-  //     const response = await fetch('http://localhost:3001/api/users', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(data)
-  //   });
-
-  
-  //     const result = await response.json();
-  //     console.log(result);
-  //     // Handle feedback atau navigasi setelah penyimpanan berhasil
-  //     alert(result.message);
-  
-  //   } catch (error) {
-  //     console.error('Error:', error);
-  //     // Handle error, tampilkan pesan atau lakukan sesuatu yang sesuai
-  //     alert(error);
-
-  //   }
-  // };
   const handleSubmit = async (data) => {
     try {
       const formData = new FormData();
@@ -59,15 +34,12 @@ const LandingPageTTE = () => {
   
       const response = await fetch('http://localhost:3001/api/users', {
         method: 'POST',
-        // Hapus headers
-        body: formData, // Ganti body dengan formData
+        body: formData,
       });
   
       const result = await response.json();
-      console.log(result);
-      alert(result.message);
+      alert("Pendaftaran Berhasil");
     } catch (error) {
-      console.error('Error:', error);
       alert(error);
     }
   };
