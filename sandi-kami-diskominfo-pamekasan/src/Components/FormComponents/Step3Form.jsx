@@ -6,7 +6,7 @@ const Step3Form = ({ onPrev, onNext}) => {
   const [warn, setWarn] = useState('')
 
   const handleNext = () => {
-    email == "" ? setWarn("field harus diisi") : onNext({ email });
+    email === "" ? setWarn("field harus diisi") : onNext({ email });
   };
   return (
     <div className='form'>

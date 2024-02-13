@@ -6,7 +6,7 @@ const Step5Form = ({ onPrev, onNext }) => {
   const [warn, setWarn] = useState('')
 
   const handleNext = () => {
-    jabatan == "" ? setWarn("field harus diisi") : onNext({ jabatan });
+    jabatan === "" ? setWarn("field harus diisi") : onNext({ jabatan });
   };
 
   return (

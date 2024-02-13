@@ -9,7 +9,6 @@ import PengajuLayout from './Layouts/PengajuLayout';
 const Pengaju = () => {
   const navigate = useNavigate();
   const [pengaju, setPengaju] = useState([])
-  let number = 1
   const handleLogOut = (event) => {
     event.preventDefault();
     localStorage.removeItem("auth");

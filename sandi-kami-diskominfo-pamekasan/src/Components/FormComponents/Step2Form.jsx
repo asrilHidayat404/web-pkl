@@ -6,7 +6,7 @@ const Step2Form = ({ onPrev, onNext}) => {
   const [warn, setWarn] = useState('')
 
   const handleNext = () => {
-    nomorWA == "" ? setWarn("field harus diisi") : onNext({ nomorWA });
+    nomorWA === "" ? setWarn("field harus diisi") : onNext({ nomorWA });
   };
   return (
     <div className='form'>

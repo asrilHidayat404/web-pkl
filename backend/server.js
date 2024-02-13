@@ -122,7 +122,6 @@ app.get("/getPengaju", (req, res) => {
       console.error("Error executing query:", err);
       res.status(500).json({ error: "Internal Server Error" });
     } else {
-      console.log("Query resultS:", result);
       res.send(result);
     }
   });

@@ -32,12 +32,11 @@ const LandingPageTTE = () => {
       formData.append('nip', data.nip); // Tambahkan ini
       formData.append('jabatan', data.jabatan); // Tambahkan ini
   
-      const response = await fetch('http://localhost:3001/api/users', {
+      fetch('http://localhost:3001/api/users', {
         method: 'POST',
         body: formData,
       });
   
-      const result = await response.json();
       alert("Pendaftaran Berhasil");
     } catch (error) {
       alert(error);

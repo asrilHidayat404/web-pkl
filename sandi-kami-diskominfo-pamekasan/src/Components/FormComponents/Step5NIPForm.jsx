@@ -6,7 +6,7 @@ const Step5NIPForm = ({ onPrev, onNext }) => {
   const [warn, setWarn] = useState('')
 
   const handleNext = () => {
-    nip == "" ? setWarn("The number of characters should not be less than the minimum value: 16.") : onNext({ nip });
+    nip === "" ? setWarn("The number of characters should not be less than the minimum value: 16.") : onNext({ nip });
   };
 
   return (
