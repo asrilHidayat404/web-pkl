@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Logo from "../../../assets/LogoSandiKami.jpg"
 import "../CSS/index.css"
 
@@ -8,31 +7,30 @@ const Header = () => {
     nav.classList.toggle("on")
   }
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-indigo-600">
-          <div className="flex items-center">
-            <button className="text-gray-500 focus:outline-none lg:hidden z-10 hamburger" onClick={navMenu}>
-              <svg
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6H20M4 12H20M4 18H11"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <div className="relative mx-4 lg:mx-0 flex items-center">
-              <div>
-                <img src={Logo} alt="" width="200px" />
-              </div>
-            </div>
+    <header className="flex items-center justify-between px-10 py-4 bg-white border-b-4 border-indigo-600">
+      <div className="flex items-center">
+        <div className="relative mx-4 lg:mx-0 flex items-center">
+          <div>
+            <img src={Logo} alt="" width="200px" />
           </div>
-          <div className="flex items-center">
+        </div>
+      </div>
+      <button className="text-gray-500 focus:outline-none lg:hidden z-10 hamburger" onClick={navMenu}>
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        ><path
+          d="M4 6H20M4 12H20M4 18H11"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+          {/* <div className="flex items-center">
             <div className="relative">
               <button className="flex mx-4 text-gray-600 focus:outline-none">
                 <svg
@@ -91,7 +89,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </header>
   );
 };
