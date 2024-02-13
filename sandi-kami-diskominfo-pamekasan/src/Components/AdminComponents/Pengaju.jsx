@@ -12,7 +12,7 @@ const Pengaju = () => {
   let number = 1
   const handleLogOut = (event) => {
     event.preventDefault();
-    localStorage.removeItem("@_@");
+    localStorage.removeItem("auth");
     navigate("/");
     window.location.reload()
   };
