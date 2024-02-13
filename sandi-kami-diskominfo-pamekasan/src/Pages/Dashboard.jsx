@@ -29,7 +29,7 @@ const Dashboard = () => {
       console.error('Error:', error);
     }
   };
-
+  console.log(pengaju)
   return (
   <div>
     <div className="flex h-screen bg-gray-200">

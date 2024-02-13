@@ -127,6 +127,18 @@ app.get("/getPengaju", (req, res) => {
   });
 });
 
+app.delete("/pengaju/hapus/:id", (req, res) => {
+  const pengajuId = req.params.id;
+  const sql = `DELETE FROM listpengaju WHERE id = ?`;
+
+  db.query(sql, [pengajuId], (error, results, fields) => {
+    if (error) {
+      return res.status(500).json({ error: "Gagal menghapus pengaju" });
+    }
+    res.json({ message: "Pengaju berhasil dihapus" });
+  });
+});
+
 function generateAccessToken(username) {
   return jwt.sign(username, process.env.TOKEN_SECRET, { expiresIn: "10s" });
 }
